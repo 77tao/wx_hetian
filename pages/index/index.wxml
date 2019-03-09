@@ -1,0 +1,55 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="nav">
+    <swiper
+      indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}"
+      interval="{{interval}}"
+      duration="{{duration}}"
+    >
+       <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+          <swiper-item>
+            <image src="{{item}}" class="slide-image"/>
+          </swiper-item>
+        </block>
+    </swiper>
+  </view>
+  <view class="couse_title"><text>最新推荐</text></view>
+  <view class="course_list">
+    <view class="course_box" wx:for="{{courseNewList}}" wx:key="{{index}}">
+      <navigator url="/pages/coursedetails/coursedetails?id={{item.id}}" open-type="navigate">
+        <view class="course_image">
+          <image src="http://www.hetianlab.com/{{item.imgUrl}}"/>
+        </view>
+      </navigator>
+      <view class="course_info">
+        <text class="title">{{item.name}}</text>
+        <text style="color:#ff7417;" wx:if="{{item.price == 0}}">免费</text>
+        <text style="color:#ff7417;" wx:else>{{item.price}}合氏币</text>
+      </view>
+      <view class="course_info">
+        <view><image src="/images/classification.png"/>{{item.difficulty}}</view>
+        <text>大幅度</text>
+      </view>
+    </view>
+  </view>
+  <view class="couse_title"><text>主打推荐</text></view>
+  <view class="course_list">
+    <view class="course_box" wx:for="{{courseHotList}}" wx:key="{{index}}">
+      <navigator url="/pages/coursedetails/coursedetails?id={{item.id}}" open-type="navigate">
+        <view class="course_image">
+          <image src="http://www.hetianlab.com/{{item.imgUrl}}"/>
+        </view>
+      </navigator>
+      <view class="course_info">
+        <text class="title">{{item.name}}</text>
+        <text style="color:#ff7417;" wx:if="{{item.price == 0}}">免费</text>
+        <text style="color:#ff7417;" wx:else>{{item.price}}合氏币</text>
+      </view>
+      <view class="course_info">
+        <view><image src="/images/classification.png"/>{{item.difficulty}}</view>
+        <text>大幅度</text>
+      </view>
+    </view>
+  </view>
+</view>

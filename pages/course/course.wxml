@@ -1,0 +1,27 @@
+<view class="container">
+  <view class="search">
+    <input 
+    type="text"
+    confirm-type="search"
+    placeholder="搜索"
+    />
+  </view>
+  <view class="course_list">
+    <view class="course_box" wx:for="{{couseList}}" wx:key="{{index}}">
+      <navigator url="/pages/coursedetails/coursedetails?id={{item.id}}" open-type="navigate">
+        <view class="course_image" bindtap='coursedetails'>
+          <image src="http://www.hetianlab.com/{{item.picture}}"/>
+        </view>
+      </navigator>
+      <view class="course_info">
+        <text class="title">{{item.name}}</text>
+        <text style="color:#ff7417;" wx:if="{{item.coin == 0}}">免费</text>
+        <text style="color:#ff7417;" wx:else>{{item.coin}}合氏币</text>
+      </view>
+      <view class="course_info">
+        <view><image src="/images/classification.png"/>{{item.diffculty}}</view>
+        <text>大幅度</text>
+      </view>
+    </view>
+  </view>
+</view>
