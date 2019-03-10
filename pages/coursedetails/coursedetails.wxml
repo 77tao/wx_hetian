@@ -1,2 +1,48 @@
-<!--pages/coursedetails/coursedetails.wxml-->
-<text>pages/coursedetails/coursedetails.wxml</text>
+<view class="container">
+  <view class="course_info_list">
+    <view class="course_image" bindtap='openVideo' hidden='{{isShowVideo}}'>
+      <image class="image" src="http://www.hetianlab.com/{{courseList.picture}}"/>
+      <image class="video" src="/images/vedioBtn.png"/>
+    </view>
+    <view class="course_video" hidden="{{!isShowVideo}}">
+      <video src="{{videoSrc}}"></video>
+    </view>
+    <view class="course_info">
+      <view class="course_name">{{courseList.ecName}}</view>
+      <view class="course_label">标签：web安全</view>
+      <view class="course_introduce">实验简介：SQL注入攻击是黑客对数据库进行攻击的常用手段之一。随着B/S模式应用开发的发展，使用这种模式编写应用程序的程序员也越来越多。但是由于程序员的水平及经验也参差不齐，相当大一部分程序员在编写代码的时候，没有对用户输入数据的合法性进行判断，使应用程序存在安全隐患。用户可以提交一段数据库查询代码，</view>
+    </view>
+  </view>
+  <view class="course_evaluate">
+    <text class="title">实验评价</text>
+    <view class="evaluate_list" wx:for="{{evaluateList}}" wx:key="{{index}}" wx:if="{{evaluateList != null}}">
+      <view class="evaluate_signle">
+        <view class="evaluate_left">
+          <image src="http://www.hetianlab.com/{{item.userPicture}}"></image>
+        </view>
+        <view class="evaluate_right">
+          <text class="evaluate_person">{{item.userName}}</text>
+          <text class="evaluate_content">{{item.assessment}}</text>
+          <view class="evaluate_time">
+            <text>时间：{{item.createTime}}</text>
+            <text>源自：{{item.expName}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="evaluate_null" wx:if="{{evaluateList == null}}">
+      <text style="margin-left:20rpx;font-size:24rpx;">暂无评价</text>
+    </view>
+  </view>
+  <view class="course_recommend">
+    <text class="title">相关推荐</text>
+    <view class="recommend_list">
+      <view class="recommend_signle" wx:for="{{recommendList}}" wx:key="{{index}}">
+        <view class="recommend_image">
+          <image src="http://www.hetianlab.com/{{item.ecPicture}}"/>
+        </view>
+        <text class="recommend_name">{{item.ecname}}</text>
+      </view>
+    </view>
+  </view>
+</view>

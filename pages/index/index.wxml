@@ -29,7 +29,7 @@
       </view>
       <view class="course_info">
         <view><image src="/images/classification.png"/>{{item.difficulty}}</view>
-        <text>大幅度</text>
+        <text>{{item.createTime}}</text>
       </view>
     </view>
   </view>
@@ -48,7 +48,7 @@
       </view>
       <view class="course_info">
         <view><image src="/images/classification.png"/>{{item.difficulty}}</view>
-        <text>大幅度</text>
+        <text>{{item.createTime}}</text>
       </view>
     </view>
   </view>

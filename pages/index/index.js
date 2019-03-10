@@ -1,5 +1,5 @@
 const API = require('../../utils/api')
-const formatTime = require('../../utils/util')
+const util = require('../../utils/util.js')
 Page({
 
   /**
@@ -38,8 +38,18 @@ Page({
   queryCourseExpt:function(){
     let that = this
     API.queryCourseExpt().then(function (res) {
+      let temp = res.message.map(function(data){
+        return {
+          id: data.id,
+          imgUrl: data.imgUrl,
+          name: data.name,
+          price: data.price,
+          difficulty: data.difficulty,
+          createTime: util.formatTime(new Date())
+        }
+      })
       that.setData({
-        courseNewList: res.message
+        courseNewList: temp
       })
     }).catch(function () {
 
@@ -51,8 +61,18 @@ Page({
   queryMainCourExpt:function() {
     let that = this
     API.queryMainCourExpt().then(function (res) {
+      let temp = res.message(function(res){
+        return {
+          id: data.id,
+          imgUrl: data.imgUrl,
+          name: data.name,
+          price: data.price,
+          difficulty: data.difficulty,
+          createTime: util.formatTime(new Date())
+        }
+      })
       that.setData({
-        courseHotList: res.message
+        courseHotList: temp
       })
     }).catch(function () {
 

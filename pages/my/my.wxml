@@ -1,22 +1,33 @@
 <view class="container">
-  <view class="user_info user_info_top"></view>
+  <view class="user_info user_info_top">
+    <view class="login_after">
+      <view class="login_info">
+        <text style="font-size:48rpx;">点击注册/登录</text>
+        <text>登录之后发现更多</text>
+      </view>
+      <view class="login_header">
+        <image src="/images/common/default.jpg"></image>
+      </view>
+    </view>
+    <!-- <view class="login_befor"></view> -->
+  </view>
   <view class="user_info user_info_bottom">
     <view class="user_course">
-      <view class="left"><image src="/images/classification.png"/></view>
+      <view class="left"><image src="/images/common/course.png"/></view>
       <view class="right">
         <text>课程</text>
         <text style="color:#cfcfcf;">></text>
       </view>
     </view>
     <view class="user_collect">
-      <view class="left"><image src="/images/classification.png"/></view>
+      <view class="left"><image src="/images/common/collect.png"/></view>
       <view class="right">
         <text>收藏</text>
         <text style="color:#cfcfcf;">></text>
       </view>
     </view>
     <view class="user_note">
-      <view class="left"><image src="/images/classification.png"/></view>
+      <view class="left"><image src="/images/common/note.png"/></view>
       <view class="right">
         <text>笔记</text>
         <text style="color:#cfcfcf;">></text>

@@ -6,6 +6,7 @@
     placeholder="搜索"
     />
   </view>
+  <scroll-view scroll-y="true" bindscrolltolower="lower" style="height:100%;">
   <view class="course_list">
     <view class="course_box" wx:for="{{couseList}}" wx:key="{{index}}">
       <navigator url="/pages/coursedetails/coursedetails?id={{item.id}}" open-type="navigate">
@@ -20,8 +21,10 @@
       </view>
       <view class="course_info">
         <view><image src="/images/classification.png"/>{{item.diffculty}}</view>
-        <text>大幅度</text>
+        <text>{{item.createTime}}</text>
       </view>
     </view>
   </view>
+  </scroll-view>
+  <loding text="正在加载中..." show="{{isShow}}"></loding>
 </view>

@@ -2,8 +2,36 @@
 .container {
   background-color: #eee;
   height:100vh;
-} 
-
+}
+.user_info_top {
+  height:300rpx;
+}
+.login_after {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  height:100%;
+}
+.login_after .login_info {
+  display: flex;
+  justify-content:flex-start;
+  flex-flow: column nowrap;
+  margin-top:50rpx;
+  margin-left:50rpx;
+  width:65%;
+  font-size:28rpx;
+}
+.login_after .login_header{
+  width:35%;
+  display: flex;
+  justify-content:center;
+  margin-top:50rpx;
+}
+.login_after .login_header image{
+  width:150rpx;
+  height:150rpx;
+  border-radius:50%;
+}
 .user_info {
   background-color: #fff;
   margin-bottom:20rpx;

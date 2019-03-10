@@ -3,7 +3,11 @@
     "pages/index/index",
     "pages/course/course",
     "pages/my/my",
-    "pages/coursedetails/coursedetails"
+    "pages/coursedetails/coursedetails",
+    "pages/mycourse/mycourse",
+    "pages/mycollect/mycollect",
+    "pages/mynote/mynote",
+    "component/loding/index"
   ],
   "window":{
     "backgroundTextStyle":"light",

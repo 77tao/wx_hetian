@@ -7,7 +7,7 @@ const request = (url,method, data) => {
       method:method,
       data:data,
       header:{
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
       },
       success(res) {
         resolve(res.data)
@@ -30,12 +30,24 @@ module.exports = {
   queryMainCourExpt: () => {
     return request('firstPage!queryMainCourExpt.action', 'POST')
   },
-  queryCouExp: () => {
-    return request('knowInfo!queryCouExp.action', 'POST')
+  queryCouExp: (pageNum) => {
+    return request('knowInfo!queryCouExp.action', 'POST',{
+      pageNum
+    })
   },
   queryExp: (ecid) => {
-    return request('queryPhoneExpByECid.action?', 'POST',{
+    return request('newExp!queryVideoByEcid.action', 'POST',{
       ecid
     })
-  }
+  },
+  getExpAss: (ecid) => {
+    return request('newExp!getExpAss.action', 'POST', {
+      ecid
+    })
+  },
+  queryRandExp: (ecid) => {
+    return request('newExp!queryRandExp.action', 'POST', {
+      ecid
+    })
+  },
 }

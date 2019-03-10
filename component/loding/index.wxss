@@ -1,0 +1,7 @@
+.loding{
+  font-size:28rpx;
+  display: flex;
+  justify-content: center;
+  height:50rpx;
+  align-items: center;
+}

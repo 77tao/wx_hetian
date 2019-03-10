@@ -1,0 +1,1 @@
+<view class="loding" hidden="{{!show}}">{{text}}</view>

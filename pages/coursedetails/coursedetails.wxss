@@ -1,1 +1,117 @@
-/* pages/coursedetails/coursedetails.wxss */
+.course_info_list{
+  display: flex;
+  flex-flow: column nowrap;
+  font-size:28rpx;
+  height:100%;
+}
+.course_image {
+  width:100%;
+  height:400rpx;
+  position: relative;
+}
+.course_image .image{
+  width:100%;
+  height:100%;
+}
+.course_image .video{
+  width:100rpx;
+  height:100rpx;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+.course_video {
+  width:100%;
+  height:400rpx;
+}
+.course_video video{
+  width:100%;
+  height:100%;
+}
+.course_info{
+  padding:20rpx;
+}
+.course_name {
+  font-size:28rpx;
+  margin-bottom:20rpx;
+}
+.course_label{
+  margin-bottom:20rpx;
+  color:#666;
+}
+.course_introduce {
+  color:#999999;
+}
+.course_evaluate .title{
+  font-size:28rpx;
+  margin-left:20rpx;
+}
+.evaluate_signle {
+  display: flex;
+  border-bottom:2rpx solid #eee;
+  padding:20rpx 0;
+  margin-left:20rpx;
+}
+.evaluate_left {
+  width:70rpx;
+  height:70rpx;
+  margin-right:20rpx;
+}
+.evaluate_left image{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+}
+.evaluate_right{
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: center;
+  font-size:28rpx;
+}
+.evaluate_right .evaluate_time,.evaluate_content {
+  font-size:24rpx;
+  color:#333;
+}
+.evaluate_right .evaluate_time text{
+  margin-right:10rpx;
+}
+.course_recommend {
+  margin-top:20rpx;
+}
+.course_recommend .title{
+  font-size:28rpx;
+  margin-left:20rpx;
+}
+.recommend_list {
+  display: flex;
+  justify-content:space-between;
+  padding:20rpx 20rpx 0 20rpx;
+  flex-flow:row wrap;
+  flex:1;
+}
+.recommend_signle {
+  border:2rpx solid #eee;
+  width:47%;
+  margin:0 0.5% 2% 0.5%;
+}
+.recommend_image{
+  width:100%;
+  height:200rpx;
+}
+.recommend_image image{
+  width:100%;
+  height:100%;
+}
+.recommend_name {
+  font-size:24rpx;
+  color:#333;
+  width:100%;
+  height:40rpx;
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box; 
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical; 
+  word-break: break-all;
+}
