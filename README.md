@@ -6,7 +6,7 @@
    * images: 存放图片
    * pages: 存放页面
    * utils: 存放公用方法
- ## 项目截图：
+## 项目结构：
 <img src="https://github.com/77tao/wx_hetian/raw/master/images/screenshot/1.jpg" width="300" height="500"/>
 <img src="https://github.com/77tao/wx_hetian/raw/master/images/screenshot/2.jpg" width="300" height="500"/>
 <img src="https://github.com/77tao/wx_hetian/raw/master/images/screenshot/3.jpg" width="300" height="500"/>
